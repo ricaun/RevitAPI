@@ -9,7 +9,7 @@ Códigos em C# para Revit API.
 
 ## Projetos
 
-### Meu primeiro Macro
+### 01 - Meu primeiro Macro
 
 Projeto que cria um [TaskDialog] que mostra uma mensagem simples utilizando o Macro do Revit.
 
@@ -18,6 +18,10 @@ Projeto que cria um [TaskDialog] que mostra uma mensagem simples utilizando o Ma
 ## Licença
 
 <p>Este projeto está licenciado sob <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.pt">Atribuição-NãoComercial-CompartilhaIgual 4.0 Internacionale</a>.</p>
+
+---
+
+Você gostou deste projeto? Por favor [marque este projeto com estrela no GitHub](https://github.com/ricaun/RevitAPI/stargazers)!
 
 [Revit API Docs]: https://www.revitapidocs.com/
 [TaskDialog]: https://www.revitapidocs.com/2020/853afb57-7455-a636-9881-61a391118c16.htm
