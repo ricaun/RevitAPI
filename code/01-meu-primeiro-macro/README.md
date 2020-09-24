@@ -35,9 +35,16 @@ public void ShowMessage3()
 {
     string title = "Hello Revit!";
     string message = "Meu primeiro macro!";
+    string content = "As opções abaixo abre outra mensagem.";
+    string footer = "<a href=\"https://github.com/ricaun/RevitAPI\">Github</a>";
     
+    // Define TaskDialog
     TaskDialog taskDialog = new TaskDialog(title);
     taskDialog.MainInstruction = message;
+    taskDialog.MainContent = content;
+    taskDialog.FooterText = footer;
+
+    // Configuração dos botões
     taskDialog.AddCommandLink(TaskDialogCommandLinkId.CommandLink1, "Opção 1");
     taskDialog.AddCommandLink(TaskDialogCommandLinkId.CommandLink2, "Opção 2");
     taskDialog.CommonButtons = TaskDialogCommonButtons.Close;
@@ -62,7 +69,7 @@ public void ShowMessage3()
 
 ## Licença
 
-<p>Este projeto está licenciado sob <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.pt">Atribuição-NãoComercial-CompartilhaIgual 4.0 Internacionale</a>.</p>
+<p>Este projeto está licenciado sob <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.pt">Atribuição-NãoComercial-CompartilhaIgual 4.0 Internacional</a>.</p>
 
 ---
 
