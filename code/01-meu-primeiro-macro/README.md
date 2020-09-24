@@ -9,23 +9,54 @@ Projeto que cria um [TaskDialog] que mostra uma mensagem simples utilizando o Ma
 ## Código
 
 ```C#
-public void ShowMessageSimple()
+public void ShowMessage()
 {
-    TaskDialog("Hello, Revit!");
+    TaskDialog.Show("Hello Revit!", "Meu primeiro macro!");
 }
 ```
 
 ```C#
-public void ShowMessageNewLine()
+public void ShowMessage2()
 {
-    string message = "";
-    message += "Revit!";
-    message += Environment.NewLine;
-    message += "Revit!";
-    message += Environment.NewLine;
-    message += "Revit!";
-    message += Environment.NewLine;
-    TaskDialog("Hello", message);
+    string title = "Hello Revit!";
+    string message = "Meu primeiro macro!";
+    message += "\n";
+    message += "Segunda linha!";
+    message += "\n";
+    message += "Terceira linha!";
+    TaskDialog task = new TaskDialog(title);
+    task.MainInstruction = message;
+    task.Show();
+}
+```
+
+```C#
+public void ShowMessage3()
+{
+    string title = "Hello Revit!";
+    string message = "Meu primeiro macro!";
+    
+    TaskDialog taskDialog = new TaskDialog(title);
+    taskDialog.MainInstruction = message;
+    taskDialog.AddCommandLink(TaskDialogCommandLinkId.CommandLink1, "Opção 1");
+    taskDialog.AddCommandLink(TaskDialogCommandLinkId.CommandLink2, "Opção 2");
+    taskDialog.CommonButtons = TaskDialogCommonButtons.Close;
+    taskDialog.DefaultButton = TaskDialogResult.Close;
+    
+    // Espera TaskDialogResult
+    TaskDialogResult result = taskDialog.Show();
+    
+    // Se opção 1
+    if (result == TaskDialogResult.CommandLink1)
+    {
+        TaskDialog.Show("Hello Revit!", "Opção 1!");
+    }
+    
+    // Se opção 2
+    if (result == TaskDialogResult.CommandLink2)
+    {
+        TaskDialog.Show("Hello Revit!", "Opção 2!");
+    }
 }
 ```
 
