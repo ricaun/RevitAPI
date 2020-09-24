@@ -4,7 +4,7 @@ Projeto que cria um [TaskDialog] que mostra uma mensagem simples utilizando o Ma
 
 ## Vídeo
 
-[<img src="https://img.youtube.com/vi/qY4bDOyZozQ/hqdefault.jpg" width="50%">](https://youtu.be/qY4bDOyZozQ)
+[![VideoIma]][Video]
 
 ## Código
 
@@ -74,5 +74,8 @@ public void ShowMessage3()
 ---
 
 Você gostou deste projeto? Por favor [marque este projeto com estrela no GitHub](https://github.com/ricaun/RevitAPI/stargazers)!
+
+[Video]: https://youtu.be/XSzhnT5PPnU
+[VideoIma]: https://img.youtube.com/vi/XSzhnT5PPnU/hqdefault.jpg
 
 [TaskDialog]: https://www.revitapidocs.com/2020/853afb57-7455-a636-9881-61a391118c16.htm
