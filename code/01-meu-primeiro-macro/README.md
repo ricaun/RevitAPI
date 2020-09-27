@@ -64,6 +64,18 @@ public void ShowMessage3()
     {
         TaskDialog.Show("Hello Revit!", "Opção 2!");
     }
+
+    // Se Close
+    if (result == TaskDialogResult.Close)
+    {
+        TaskDialog.Show("Hello Revit!","Close!");
+    }
+			
+    // Se Cancel
+    if (result == TaskDialogResult.Cancel)
+    {
+        TaskDialog.Show("Hello Revit!","Cancel!");
+    }
 }
 ```
 
@@ -75,7 +87,10 @@ public void ShowMessage3()
 
 Você gostou deste projeto? Por favor [marque este projeto com estrela no GitHub](https://github.com/ricaun/RevitAPI/stargazers)!
 
-[Video]: https://youtu.be/XSzhnT5PPnU
-[VideoIma]: https://img.youtube.com/vi/XSzhnT5PPnU/hqdefault.jpg
+[Video]: https://youtu.be/o4T34RXnZAU
+[VideoIma]: https://img.youtube.com/vi/o4T34RXnZAU/hqdefault.jpg
+
+[Video2]: https://youtu.be/XSzhnT5PPnU
+[VideoIma2]: https://img.youtube.com/vi/XSzhnT5PPnU/hqdefault.jpg
 
 [TaskDialog]: https://www.revitapidocs.com/2020/853afb57-7455-a636-9881-61a391118c16.htm
