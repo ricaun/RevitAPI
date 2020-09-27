@@ -1,4 +1,4 @@
-# Select Elements
+# Seleciona Elementos
 
 Projeto que utiliza [Selection] Class para mostrar os elementos selecionados no [Document].
 

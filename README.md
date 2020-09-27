@@ -15,11 +15,17 @@ Projeto que cria um [TaskDialog] que mostra uma mensagem simples utilizando o Ma
 
 * [Code](code/01-meu-primeiro-macro/)
 
-### 02 - Select Elements
+### 02 - Seleciona Elementos
 
 Projeto que utiliza [Selection] Class para mostrar os elementos selecionados no [Document].
 
-* [Code](code/02-select-elements/)
+* [Code](code/02-seleciona-elementos/)
+
+### 03 - Elementos e Parâmetros
+
+Projeto que mostra os [Parameter] dos [Element] e edita utilizando [Transaction].
+
+* [Code](code/03-elementos-e-parametros/)
 
 ## Licença
 
@@ -34,3 +40,6 @@ Você gostou deste projeto? Por favor [marque este projeto com estrela no GitHub
 [TaskDialog]: https://www.revitapidocs.com/2020/853afb57-7455-a636-9881-61a391118c16.htm
 [Selection]: https://www.revitapidocs.com/2020/31b73d46-7d67-5dbb-4dad-80aa597c9afc.htm
 [Document]: https://www.revitapidocs.com/2020/db03274b-a107-aa32-9034-f3e0df4bb1ec.htm
+[Element]: https://www.revitapidocs.com/2020/eb16114f-69ea-f4de-0d0d-f7388b105a16.htm
+[Parameter]: https://www.revitapidocs.com/2020/333ff41b-e6a7-d959-60bf-c3bfae495581.htm
+[Transaction]: https://www.revitapidocs.com/2020/308ebf8d-d96d-4643-cd1d-34fffcea53fd.htm
