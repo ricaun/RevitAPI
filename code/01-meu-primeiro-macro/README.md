@@ -9,13 +9,19 @@ Projeto que cria um [TaskDialog] que mostra uma mensagem simples utilizando o Ma
 ## Código
 
 ```C#
+#region 01 - Meu primeiro Macro
+
+/// <summary>
+/// Mostra caixa de dialogo com texto simples
+/// </summary>
 public void ShowMessage()
 {
     TaskDialog.Show("Hello Revit!", "Meu primeiro macro!");
 }
-```
 
-```C#
+/// <summary>
+/// Mostra caixa de dialogo com texto de multipla linhas
+/// </summary>
 public void ShowMessage2()
 {
     string title = "Hello Revit!";
@@ -28,9 +34,10 @@ public void ShowMessage2()
     task.MainInstruction = message;
     task.Show();
 }
-```
 
-```C#
+/// <summary>
+/// Mostra caixa de dialogo complexa com multipla opções
+/// </summary>
 public void ShowMessage3()
 {
     string title = "Hello Revit!";
@@ -77,6 +84,8 @@ public void ShowMessage3()
         TaskDialog.Show("Hello Revit!","Cancel!");
     }
 }
+
+#endregion
 ```
 
 ## Licença

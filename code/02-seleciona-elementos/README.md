@@ -9,6 +9,11 @@ Projeto que utiliza [Selection] Class para mostrar os elementos selecionados no 
 ## Código
 
 ```C#
+#region 02 - Selection Elements
+
+/// <summary>
+/// Seleciona o Elemento utilizando o PickObject
+/// </summary>
 public void SelectElement()
 {
     // Document
@@ -34,9 +39,10 @@ public void SelectElement()
     task.MainInstruction = message;
     task.Show();
 }
-```
 
-```C#
+/// <summary>
+/// Seleciona multiplos Elementos utilizando o PickObjects
+/// </summary>
 public void SelectElements()
 {
     // Document
@@ -66,6 +72,8 @@ public void SelectElements()
     task.MainInstruction = message;
     task.Show();
 }
+
+#endregion
 ```
 
 ## Licença
