@@ -1,6 +1,6 @@
 # Elementos e Parâmetros
 
-Projeto que mostra os [Parameter] dos [Element] e edita utilizando [Transaction].
+Projeto que mostra o [Parameter] de Comentário dos [Element] e edita utilizando [Transaction].
 
 ## Vídeo
 
@@ -17,7 +17,7 @@ Projeto que mostra os [Parameter] dos [Element] e edita utilizando [Transaction]
 public void SelectElementParameter()
 {
     // Nome do Parâmetro
-    var parameterName = "Comments";
+    var parameterName = "Comentários";
     
     // Document
     var document = ActiveUIDocument.Document;
@@ -53,14 +53,14 @@ public void SelectElementParameter()
 }
 
 /// <summary>
-/// Seleciona elemento e edita o parametro de Comentário
+/// Seleciona elemento e edita o parametro de Comentário em mostra o valor
 /// </summary>
-public void SelectElementEditParameter()
+public void SelectElementParameterEdit()
 {
     // Nome do Parâmetro
-    var parameterName = "Comments";
+    var parameterName = "Comentários";
     // Texto para colocar no Parâmetro
-    var parameterText = "Este é um texto!";
+    var parameterText = "Linha 1\nLinha 2\nLinha 3";
     
     // Document
     var document = ActiveUIDocument.Document;
@@ -77,11 +77,12 @@ public void SelectElementEditParameter()
     // Procura parâmetro pelo nome
     var parameter = element.LookupParameter(parameterName);
     
+    // Se parâmetro for valido
     if (parameter != null)
     {
         // Cria Transaction
         Transaction transaction = new Transaction(document);
-        transaction.Start("SelectElementEditParameter");
+        transaction.Start("SelectElementParameterEdit");
         
         // Muda valor do parâmetro
         parameter.Set(parameterText);
@@ -115,8 +116,8 @@ public void SelectElementEditParameter()
 
 Você gostou deste projeto? Por favor [marque este projeto com estrela no GitHub](https://github.com/ricaun/RevitAPI/stargazers)!
 
-[Video]: https://youtu.be/XSzhnT5PPnU
-[VideoIma]: https://img.youtube.com/vi/XSzhnT5PPnU/hqdefault.jpg
+[Video]: https://youtu.be/LODrbyzhEz0
+[VideoIma]: https://img.youtube.com/vi/LODrbyzhEz0/hqdefault.jpg
 
 [Element]: https://www.revitapidocs.com/2020/eb16114f-69ea-f4de-0d0d-f7388b105a16.htm
 [Parameter]: https://www.revitapidocs.com/2020/333ff41b-e6a7-d959-60bf-c3bfae495581.htm
