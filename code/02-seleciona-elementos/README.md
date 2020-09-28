@@ -9,7 +9,7 @@ Projeto que utiliza [Selection] Class para mostrar os elementos selecionados no 
 ## Código
 
 ```C#
-#region 02 - Selection Elements
+#region 02 - Seleciona Elementos
 
 /// <summary>
 /// Seleciona o Elemento utilizando o PickObject
