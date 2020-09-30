@@ -4,7 +4,8 @@ Projeto que rotaciona a posição de [Element] utiliando o [ElementTransformUtil
 
 Utiliza as [Rotinas Utils]
 * PickElement
-* PickPoint
+* PickElements
+* PickXYZ
 
 ## Vídeo
 
@@ -30,7 +31,7 @@ public void ElementRotate()
     while (element != null)
     {
         // angle
-        var angle = 90.0;
+        var angle = 30.0;
         
         // deg to rad
         angle *= Math.PI / 180.0;
@@ -76,7 +77,7 @@ public void ElementRotateAll()
     if (elements != null)
     {
         // angle
-        var angle = 90.0;
+        var angle = 30.0;
         
         // deg to rad
         angle *= Math.PI / 180.0;
@@ -119,7 +120,7 @@ public void ElementRotateCenter()
     while (element != null)
     {
         // angle
-        var angle = 90.0;
+        var angle = 30.0;
         
         // deg to rad
         angle *= Math.PI / 180.0;

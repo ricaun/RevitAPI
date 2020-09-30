@@ -1,11 +1,11 @@
-# Move Elementos
+# Movendo Elementos
 
 Projeto que move a posição de [Element] utiliando o [ElementTransformUtils].
 
 Utiliza as [Rotinas Utils]
 * PickElement
 * PickElements
-* PickPoint
+* PickXYZ
 
 ## Vídeo
 
