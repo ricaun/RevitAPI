@@ -2,6 +2,10 @@
 
 Projeto que rotaciona a posição de [Element] utiliando o [ElementTransformUtils].
 
+Utiliza as [Rotinas Utils]
+* PickElement
+* PickPoint
+
 ## Vídeo
 
 [![VideoIma]][Video]
@@ -10,27 +14,6 @@ Projeto que rotaciona a posição de [Element] utiliando o [ElementTransformUtil
 
 ```C#
 #region 05 - Rotaciona Elementos
-
-/// <summary>
-/// Pega ponto XYZ utilizando o PickPoint
-/// </summary>
-/// <returns>Ponto XYZ</returns>
-private XYZ PickXYZ()
-{
-    // Selection
-    var selection = ActiveUIDocument.Selection;
-
-    try {
-        // Pick Object
-        var xyz = selection.PickPoint();
-    
-        // retorna point
-        return xyz;		
-        
-    } catch (Exception) {
-        return null;
-    }
-}
 
 /// <summary>
 /// Seleciona elemento e rotaciona em relação ao ponto
@@ -46,10 +29,6 @@ public void ElementRotate()
     // Se Element for valido
     while (element != null)
     {
-        // Cria Transaction
-        Transaction transaction = new Transaction(document);
-        transaction.Start("ElementRotate");
-        
         // angle
         var angle = 90.0;
         
@@ -59,17 +38,26 @@ public void ElementRotate()
         // Pega ponto
         var center = PickXYZ();
         
-        // axis
-        var axis = Line.CreateBound(center, center + XYZ.BasisZ);
-        
-        // Move Element
-        ElementTransformUtils.RotateElement(document, element.Id, axis, angle);
-        
-        // Envia todas as modificações
-        transaction.Commit();
-        
-        // Pick Element
-        element = PickElement();
+        // Se ponto existir
+        if (center != null)
+        {
+            // axis
+            var axis = Line.CreateBound(center, center + XYZ.BasisZ);
+            
+            // Cria Transaction
+            using (Transaction transaction = new Transaction(document)) {
+                transaction.Start("ElementRotate");
+            
+                // Rotate Element
+                ElementTransformUtils.RotateElement(document, element.Id, axis, angle);
+                
+                // Envia todas as modificações
+                transaction.Commit();
+            }
+                                
+            // Pick Element
+            element = PickElement();
+        }
     }
 }
 
@@ -117,15 +105,15 @@ public void ElementRotateCenter()
         var axis = Line.CreateBound(center, center + XYZ.BasisZ);
         
         // Cria Transaction
-        Transaction transaction = new Transaction(document);
-        transaction.Start("ElementRotate");
+        using (Transaction transaction = new Transaction(document)) {
+            transaction.Start("ElementRotate");
         
-        // Move Element
-        ElementTransformUtils.RotateElement(document, element.Id, axis, angle);
-        
-        // Envia todas as modificações
-        transaction.Commit();
-        
+            // Rotate Element
+            ElementTransformUtils.RotateElement(document, element.Id, axis, angle);
+            
+            // Envia todas as modificações
+            transaction.Commit();
+        }
         // Pick Element
         element = PickElement();
     }
@@ -142,8 +130,10 @@ public void ElementRotateCenter()
 
 Você gostou deste projeto? Por favor [marque este projeto com estrela no GitHub](https://github.com/ricaun/RevitAPI/stargazers)!
 
-[Video]: https://youtu.be/LODrbyzhEz0
-[VideoIma]: https://img.youtube.com/vi/LODrbyzhEz0/hqdefault.jpg
+[Video]: https://youtu.be/XSzhnT5PPnU
+[VideoIma]: https://img.youtube.com/vi/XSzhnT5PPnU/hqdefault.jpg
+
+[Rotinas Utils]: code/00-rotinas-utils/
 
 [Element]: https://www.revitapidocs.com/2020/eb16114f-69ea-f4de-0d0d-f7388b105a16.htm
 [ElementTransformUtils]: https://www.revitapidocs.com/2020/781ad017-5ee5-f44b-5db2-e8e1f883ae5d.htm
