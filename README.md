@@ -9,6 +9,12 @@ Códigos em C# para Revit API utilizando Macro e o SharpDevelop.
 
 ## Projetos
 
+### 00 - Rotinas Utils
+
+Rotinas utils para facilitar a programação utilizando [Revit API Docs].
+
+* [Código Fonte](code/00-rotinas-utils)
+
 ### 01 - Meu primeiro Macro
 
 Projeto que cria um [TaskDialog] que mostra uma mensagem simples utilizando o Macro do Revit.
@@ -27,6 +33,18 @@ Projeto que mostra os [Parameter] dos [Element] e edita utilizando [Transaction]
 
 * [Código Fonte](code/03-elementos-e-parametros/)
 
+### 04 - Move Elementos
+
+Projeto que move a posição de [Element] utiliando o [ElementTransformUtils].
+
+* [Código Fonte](code/04-move-elementos/)
+
+### 05 - Rotaciona Elementos
+
+Projeto que rotaciona a posição de [Element] utiliando o [ElementTransformUtils].
+
+* [Código Fonte](code/05-rotaciona-elementos/)
+
 ## Licença
 
 <p>Este projeto está licenciado sob <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.pt">Atribuição-NãoComercial-CompartilhaIgual 4.0 Internacional</a>.</p>
@@ -43,3 +61,4 @@ Você gostou deste projeto? Por favor [marque este projeto com estrela no GitHub
 [Element]: https://www.revitapidocs.com/2020/eb16114f-69ea-f4de-0d0d-f7388b105a16.htm
 [Parameter]: https://www.revitapidocs.com/2020/333ff41b-e6a7-d959-60bf-c3bfae495581.htm
 [Transaction]: https://www.revitapidocs.com/2020/308ebf8d-d96d-4643-cd1d-34fffcea53fd.htm
+[ElementTransformUtils]: https://www.revitapidocs.com/2020/781ad017-5ee5-f44b-5db2-e8e1f883ae5d.htm

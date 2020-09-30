@@ -62,6 +62,49 @@ public void ElementRotate()
 }
 
 /// <summary>
+/// Seleciona elementos e rotaciona em relação ao ponto
+/// </summary>
+public void ElementRotateAll()
+{
+    // Document
+    var document = ActiveUIDocument.Document;
+    
+    // Pick Element
+    var elements = PickElements();
+    
+    // Se Element for valido
+    if (elements != null)
+    {
+        // angle
+        var angle = 90.0;
+        
+        // deg to rad
+        angle *= Math.PI / 180.0;
+        
+        // Pega ponto
+        var center = PickXYZ();
+        
+        // Se ponto existir
+        if (center != null)
+        {
+            // axis
+            var axis = Line.CreateBound(center, center + XYZ.BasisZ);
+            
+            // Cria Transaction
+            using (Transaction transaction = new Transaction(document)) {
+                transaction.Start("ElementRotate");
+            
+                // Rotate Element
+                ElementTransformUtils.RotateElements(document, elements.Select(e => e.Id).ToList(), axis, angle);
+                
+                // Envia todas as modificações
+                transaction.Commit();
+            }
+        }
+    }
+}
+
+/// <summary>
 /// Seleciona elemento e rotaciona com o centro
 /// </summary>
 public void ElementRotateCenter()

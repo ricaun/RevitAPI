@@ -1,6 +1,6 @@
 # Rotinas Utils
 
-Rotinas utils facilitar a programação utilizando [Revit API Docs].
+Rotinas utils para facilitar a programação utilizando [Revit API Docs].
 
 ## Código
 

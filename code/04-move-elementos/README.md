@@ -175,8 +175,8 @@ public void ElementMoveAll()
 
 Você gostou deste projeto? Por favor [marque este projeto com estrela no GitHub](https://github.com/ricaun/RevitAPI/stargazers)!
 
-[Video]: https://youtu.be/XSzhnT5PPnU
-[VideoIma]: https://img.youtube.com/vi/XSzhnT5PPnU/hqdefault.jpg
+[Video]: https://youtu.be/Apl5c4Rl8WY
+[VideoIma]: https://img.youtube.com/vi/Apl5c4Rl8WY/hqdefault.jpg
 
 [Rotinas Utils]: code/00-rotinas-utils/
 
