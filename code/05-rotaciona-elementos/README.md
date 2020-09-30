@@ -173,8 +173,8 @@ public void ElementRotateCenter()
 
 Você gostou deste projeto? Por favor [marque este projeto com estrela no GitHub](https://github.com/ricaun/RevitAPI/stargazers)!
 
-[Video]: https://youtu.be/XSzhnT5PPnU
-[VideoIma]: https://img.youtube.com/vi/XSzhnT5PPnU/hqdefault.jpg
+[Video]: https://youtu.be/jeuBTYPgwp8
+[VideoIma]: https://img.youtube.com/vi/jeuBTYPgwp8/hqdefault.jpg
 
 [Rotinas Utils]: code/00-rotinas-utils/
 
