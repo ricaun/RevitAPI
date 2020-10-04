@@ -45,6 +45,14 @@ Projeto que rotaciona a posição de [Element] utiliando o [ElementTransformUtil
 
 * [Código Fonte](code/05-rotaciona-elementos/)
 
+### 06 - RevitLookup
+
+[RevitLookup] é uma ferramenta interativa de exploração do banco de dados Revit BIM para visualizar e navegar nas propriedades e relacionamentos dos elementos.
+
+* [Código Fonte](code/06-RevitLookup/)
+
+[RevitLookup]: https://github.com/jeremytammik/RevitLookup
+
 ## Licença
 
 <p>Este projeto está licenciado sob <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.pt">Atribuição-NãoComercial-CompartilhaIgual 4.0 Internacional</a>.</p>
