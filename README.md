@@ -53,6 +53,12 @@ Projeto que rotaciona a posição de [Element] utiliando o [ElementTransformUtil
 
 [RevitLookup]: https://github.com/jeremytammik/RevitLookup
 
+### 07 - Seleciona Parede com Filtro
+
+Projeto que seleciona todos os [Element] da mesma categoria [Wall] utilizando o [FilteredElementCollector].
+
+* [Código Fonte](code/07-seleciona-parede-com-filtro/)
+
 ## Licença
 
 <p>Este projeto está licenciado sob <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.pt">Atribuição-NãoComercial-CompartilhaIgual 4.0 Internacional</a>.</p>
@@ -70,3 +76,5 @@ Você gostou deste projeto? Por favor [marque este projeto com estrela no GitHub
 [Parameter]: https://www.revitapidocs.com/2020/333ff41b-e6a7-d959-60bf-c3bfae495581.htm
 [Transaction]: https://www.revitapidocs.com/2020/308ebf8d-d96d-4643-cd1d-34fffcea53fd.htm
 [ElementTransformUtils]: https://www.revitapidocs.com/2020/781ad017-5ee5-f44b-5db2-e8e1f883ae5d.htm
+[Wall]: https://www.revitapidocs.com/2020/b5891733-c602-12df-beab-da414b58d608.htm
+[FilteredElementCollector]: https://www.revitapidocs.com/2020/263cf06b-98be-6f91-c4da-fb47d01688f3.htm
